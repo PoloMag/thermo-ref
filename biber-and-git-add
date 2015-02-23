@@ -1,0 +1,71 @@
+#!/usr/bin/env python
+#
+# biber-and-git-add
+# Script to run biber on a BibTeX file in tool mode and then add to git staging area
+# This script assumes a UNIX/Cygwin environment
+
+import sys
+import os
+import subprocess
+
+usageMsg = 'usage: convert-and-git-add FILENAME'
+
+# check if argument is given
+try:
+    fileName = sys.argv[1]
+except IndexError:
+    sys.exit(usageMsg)
+
+baseName, bibExtension = os.path.splitext(fileName)
+
+backupFileName = baseName + "-backup" + bibExtension
+
+# check if file given exists
+if not os.path.isfile(fileName):
+    sys.exit("Given filename " + fileName + " does not exist")
+    
+# create a backup version
+try:
+    print("Attempting to create a backup copy...")
+    backupCmd = "cp " + fileName + " " + backupFileName
+    subprocess.check_call(backupCmd)
+    print("Created " + backupFileName + ".")
+except:
+    sys.exit("""Could not create backup copy; failed to run the command
+
+    """ + backupCmd)
+
+# run biber on file
+try:
+    print()
+    print("Running biber on file...")
+    biberOutFileName = baseName + "-biber" + bibExtension
+
+    logFileName = baseName + ".blg"
+
+    biberCmd = "biber  --tool " + fileName + " --output_file=" + biberOutFileName + " --logfile=" + logFileName
+    subprocess.check_call(biberCmd)
+except:
+    sys.exit("Could not run biber on file, see file " + logFileName)
+    
+# rename biber file to original file
+try:
+    print()
+    print("Renaming the files...")
+    mvCmd = "mv " + biberOutFileName + " " + fileName
+    subprocess.check_call(mvCmd)
+    print("Done.")
+except:
+    sys.exit("""Could not rename biber transformed file into the original file;failed to run the command
+
+    """ + mvCmd)
+        
+# run git add command
+try:
+    print()
+    print("Running git add command...")
+    gitCmd = "git add " + fileName
+    subprocess.check_call(gitCmd)
+    print("Done.")
+except:
+    sys.exit("Could not run git add command on " + fileName)
