@@ -28,7 +28,7 @@ if not os.path.isfile(fileName):
 try:
     print("Attempting to create a backup copy...")
     backupCmd = "cp " + fileName + " " + backupFileName
-    subprocess.check_call(backupCmd)
+    subprocess.check_call(backupCmd.split())
     print("Created " + backupFileName + ".")
 except:
     sys.exit("""Could not create backup copy; failed to run the command
@@ -44,7 +44,7 @@ try:
     logFileName = baseName + ".blg"
 
     biberCmd = "biber  --tool " + fileName + " --output_file=" + biberOutFileName + " --logfile=" + logFileName
-    subprocess.check_call(biberCmd)
+    subprocess.check_call(biberCmd.split())
 except:
     sys.exit("Could not run biber on file, see file " + logFileName)
     
@@ -53,7 +53,7 @@ try:
     print()
     print("Renaming the files...")
     mvCmd = "mv " + biberOutFileName + " " + fileName
-    subprocess.check_call(mvCmd)
+    subprocess.check_call(mvCmd.split())
     print("Done.")
 except:
     sys.exit("""Could not rename biber transformed file into the original file;failed to run the command
@@ -65,7 +65,7 @@ try:
     print()
     print("Running git add command...")
     gitCmd = "git add " + fileName
-    subprocess.check_call(gitCmd)
+    subprocess.check_call(gitCmd.split())
     print("Done.")
 except:
     sys.exit("Could not run git add command on " + fileName)
