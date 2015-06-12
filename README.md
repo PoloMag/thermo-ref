@@ -1,4 +1,10 @@
-This is a set of BibTeX files related to research in Thermodynamics and Foam Formation.
+This is my collection of BibTeX files.
+
+The main file, `Thermo-Foam-Ref.bib`, includes many papers and books related to my field of study, which was originally foam formation in oil and refrigerant mixtures. Now, this databases includes many other works on thermal sciences in general.
+
+The other `.bib` files contains other books I read, mainly non-fiction and fiction books.
+
+I'm keeping this repository public in case anyone uses the same sources I use.
 
 ## Biber
 
