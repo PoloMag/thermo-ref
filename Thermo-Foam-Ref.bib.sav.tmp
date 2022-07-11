@@ -346,10 +346,32 @@ DOI={10.3389/fenrg.2019.00068}}
 	year = {2014},
 	bdsk-url-1 = {https://doi.org/10.1021/ie4033999}}
 
+@book{bib:jaluria-design,
+	author = {Yogesh Jaluria},
+	edition = {2},
+	publisher = {CRC Press},
+	title = {Design and Optimization of Thermal Systems},
+	address = {Boca Raton},
+	year = {2008}}
+
+@book{bib:janna-pt,
+	author = {William S. Janna},
+	address = {S{\~a}o Paulo},
+	edition = {4},
+	publisher = {Cengage Learning},
+	title = {Projetos de sistemas fluidot{\'e}rmicos},
+	year = {2016}}
+
+
+@book{bib:boehm,
+	author = {Robert F. Boehm},
+	address = {New Yorl},
+	publisher = {John Wiley \& Sons},
+	title = {Design Analysis of thermal systems},
+	year = {1987}}
+
 @book{bib:stoeckerdesign,
 	author = {W. F. Stoecker},
-	date-added = {2021-07-29 07:28:57 -0300},
-	date-modified = {2021-07-29 07:29:37 -0300},
 	edition = {2},
 	publisher = {McGraw-Hill},
 	title = {Design of Thermal Systems},
@@ -2182,6 +2204,14 @@ DOI={10.3389/fenrg.2019.00068}}
 	volume = {104},
 	year = {1982}}
 
+@book{bib:shapiro-pt,
+	address = {Rio de Janeiro},
+	author = {Michael J. Moran and Howard N. Shapiro},
+	edition = {6},
+	publisher = {LTC},
+	title = {Fundamentals of Engineering Thermodynamics},
+	year = {2011}}
+
 @book{bib:shapiro,
 	address = {Chichester},
 	author = {Michael J. Moran and Howard N. Shapiro},
@@ -3892,6 +3922,13 @@ DOI={10.3389/fenrg.2019.00068}}
 	title = {Transfer{\^e}ncia de Calor e Mec{\^a}nica dos Fluidos Computacional},
 	year = 2012}
 
+@inproceedings{bib:fortkamp21-using,
+	address = {Maryland},
+	author = {F. P. Fortkamp and Lu{\'}s F. P. Cattelan and Guilherme F. Peixer and J. A. Lozano and Barbosa, Jr., J. R.},
+	booktitle = {Proceedings of the Ninth {IIR} International Conference on Caloric Cooling and Applications of Caloric Materials ({THERMAG IX})},
+	title = {Using machine learning to design a large-scale magnetic circuit},
+	year = 2021}
+
 @inproceedings{bib:fortkamp2016-analy-halbac,
 	address = {Torino, Italy},
 	author = {F. P. Fortkamp and J. A. Lozano and Barbosa, Jr., J. R.},
@@ -5001,40 +5038,4 @@ DOI={10.3389/fenrg.2019.00068}}
 
 @Book{bib:Barbetta2007,
   author    = {Barbetta, Pedro Alberto},
-  title     = {{Estat{\'{i}}stica Aplicada {\`{a}}s Ci{\^{e}}ncias Sociais}},
-  edition   = {7},
-  publisher = {Editora UFSC},
-  address   = {Florian{\'{o}}polis},
-  keywords  = {Ci{\^{e}}ncias Sociais, Estat{\'{i}}stica},
-  year      = {2007},
-}
-
-@book{bib:Montgomery2012,
-	address = {Hoboken},
-	author = {Montgomery, Douglas C. and Peck, Elizabeth A. and Vining, G. Geoffrey},
-	edition = {5},
-	keywords = {Regression Analysis},
-	publisher = {John Wiley {\&} Sons},
-	title = {{Introduction to Linear Regression Analysis}},
-	year = {2012}}
-
-@misc{bib:Healy2019a,
-	author = {Healy, Kieran},
-	date-modified = {2021-04-23 18:57:46 +0000},
-	note = {Acessado em 01 de julho de 2019.},
-	title = {{SOCIOL 880: DATA MANAGEMENT}},
-	urldate = {2019-06-20},
-	year = {2019},
-	bdsk-url-1 = {http://data880.co/}}
-
-@Book{bib:Montgomery2007,
-  author    = {Montgomery, Douglas C. and Runger, George C.},
-  title     = {{Applied Statistics and Probability for Engineers}},
-  edition   = {4},
-  publisher = {John Wiley {\&} Sons},
-  address   = {Hoboken},
-  keywords  = {Probabilities, Statistics},
-  year      = {2007},
-}
-
-@Book{bib:Grus2016,
+  title     = {{Estat{\'{i}}st
